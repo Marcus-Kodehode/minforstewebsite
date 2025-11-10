@@ -55,3 +55,13 @@ let people = [
     hobbies: ["drum", "skate", "camp"],
   },
 ];
+
+console.log(people);
+
+for (let i = 0; i < people.length; i++) {
+  console.log(
+    `${people[i].name} is ${people[i].age} years old. ${
+      people[i].isMale ? "He" : "She"
+    } like to ${people[i].hobbies[0]}`
+  );
+}
