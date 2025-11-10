@@ -1,0 +1,28 @@
+@import url("base.css");
+@import url("header.css");
+@import url("./sections/heroSection.css");
+@import url("./utils/scrollToTopButton.css");
+@import url("./components/cards.css");
+
+main {
+  padding-inline: 24px;
+  max-width: 1200px;
+  justify-self: center;
+}
+
+/** //////////////////// */
+/** /////Sections//////// */
+/** //////////////////// */
+
+section {
+  height: 100svh;
+}
+
+/** //////////////////// */
+/** ///HERO SECTION////// */
+/** //////////////////// */
+
+#top {
+  position: absolute;
+  top: 0;
+}

@@ -18,13 +18,16 @@
       rel="stylesheet" />
     <link
       rel="stylesheet"
-      href="style.css" />
+      href="/css/main.css" />
     <!-- <script
       defer
       src="script.js"></script> -->
-    <script
+    <!-- <script
       defer
-      src="loops.js"></script>
+      src="loops.js"></script> -->
+    <script
+      type="module"
+      src="/js/cards.js"></script>
   </head>
   <body>
     <div id="top"></div>
@@ -80,14 +83,16 @@
         id="contactSection"
         class="contact">
         <h2>Section 3</h2>
+        <div id="cardContainer"></div>
       </section>
     </main>
-
-    <button
-      id="scrollToTop"
-      class="scrollToTopButton">
-      <a href="#top">↑</a>
-    </button>
+    <a href="#top">
+      <button
+        id="scrollToTop"
+        class="scrollToTopButton">
+        ↑
+      </button>
+    </a>
     <footer>footer</footer>
   </body>
 </html>

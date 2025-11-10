@@ -1,0 +1,40 @@
+header {
+  position: fixed;
+  width: 100%;
+  /* border: 2px red solid; */
+  background-color: rgb(2, 62, 42);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 24px;
+  height: 100px;
+}
+
+header > div {
+  /* border: 4px dotted yellow; */
+  height: 60px;
+}
+
+header > div > img {
+  height: 100%;
+}
+
+header > nav {
+  /* border: 4px dotted yellow; */
+}
+
+header > nav > ul {
+  /* border: 2px red solid; */
+  display: flex;
+  gap: 24px;
+}
+
+li.navItem {
+  /* text-decoration: underline; */
+  list-style: none;
+}
+
+li.navItem a {
+  text-decoration: none;
+  color: white;
+}

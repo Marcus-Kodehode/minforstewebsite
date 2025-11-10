@@ -1,0 +1,17 @@
+#cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.card {
+  display: grid;
+  gap: 12px;
+  background-color: var(--primary-color);
+  padding: 24px;
+  border-radius: 8px;
+  flex-grow: 1;
+}
+
+.card h2 {
+}

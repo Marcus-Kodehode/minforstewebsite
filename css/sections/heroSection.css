@@ -1,0 +1,36 @@
+section.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+section.hero h1 {
+  color: aquamarine;
+  font-size: 84px;
+  margin-bottom: 24px; /* det samme som: margin: 0 0 24px 0; */
+}
+
+section.hero p {
+  color: rgb(33, 251, 251);
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+section.hero button {
+  font-size: 48px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 40px;
+  background-color: rgb(30, 255, 139);
+  border: none;
+  color: rgb(2, 62, 42);
+}
+
+section.hero button:hover {
+  scale: 1.1;
+}
+
+section.hero button:active {
+  scale: 0.99;
+}
