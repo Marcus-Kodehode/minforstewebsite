@@ -85,37 +85,37 @@ implementering eksempel (kan forbedres/perfeksjoneres):
 - **Status:** 🔴 Må lages
 
 #### 5. CSS Ikon
-- **Filnavn:** `icon-css.svg`
+- **Filnavn:** `icon-css.png`
 - **Plassering:** `assets/icons/`
-- **Størrelse:** 64x64px (SVG)
+- **Størrelse:** 64x64px (png)
 - **Beskrivelse:** Representerer CSS konsepter
 - **Status:** 🔴 Må lages
 
 #### 6. JavaScript Ikon
-- **Filnavn:** `icon-javascript.svg`
+- **Filnavn:** `icon-javascript.png`
 - **Plassering:** `assets/icons/`
-- **Størrelse:** 64x64px (SVG)
+- **Størrelse:** 64x64px (png)
 - **Beskrivelse:** Representerer JavaScript konsepter
 - **Status:** 🔴 Må lages
 
 #### 7. Responsive Ikon
-- **Filnavn:** `icon-responsive.svg`
+- **Filnavn:** `icon-responsive.png`
 - **Plassering:** `assets/icons/`
-- **Størrelse:** 64x64px (SVG)
+- **Størrelse:** 64x64px (png)
 - **Beskrivelse:** Representerer responsive design
 - **Status:** 🔴 Må lages
 
 #### 8. Interactive Ikon
-- **Filnavn:** `icon-interactive.svg`
+- **Filnavn:** `icon-interactive.png`
 - **Plassering:** `assets/icons/`
-- **Størrelse:** 64x64px (SVG)
+- **Størrelse:** 64x64px (png)
 - **Beskrivelse:** Representerer interaktivitet
 - **Status:** 🔴 Må lages
 
 #### 9. Modern Ikon
-- **Filnavn:** `icon-modern.svg`
+- **Filnavn:** `icon-modern.png`
 - **Plassering:** `assets/icons/`
-- **Størrelse:** 64x64px (SVG)
+- **Størrelse:** 64x64px (png)
 - **Beskrivelse:** Representerer moderne design
 - **Status:** 🔴 Må lages
 
