@@ -84,15 +84,27 @@
 }
 
 /**
- * Feature icon - Emoji som ikon
+ * Feature icon - Bilde eller emoji
  */
 .feature-icon {
-  font-size: 3rem;
   margin-bottom: var(--space-4);
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   z-index: 1;
   transition: transform var(--transition-base);
+  height: 80px;
+}
+
+.feature-icon img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.feature-icon.emoji {
+  font-size: 3rem;
 }
 
 .feature-card:hover .feature-icon {

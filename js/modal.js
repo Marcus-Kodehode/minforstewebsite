@@ -74,6 +74,9 @@ export function initModal() {
         <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">
           💡 Tips: Trykk ESC eller klikk utenfor for å lukke!
         </p>
+        <p style="margin-top: 1.5rem; padding: 1rem; background: rgba(245, 158, 11, 0.1); border-radius: 8px; color: var(--accent-color); font-size: 0.9rem;">
+          🧙‍♂️ Easter Egg: Scroll ned til People section og finn Joakim - en mystisk goblin fra Eldoria!
+        </p>
       `;
       openModal(content);
     });

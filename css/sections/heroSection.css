@@ -71,6 +71,32 @@
 }
 
 /**
+ * Hero logo - Større versjon av logo
+ */
+.hero-logo {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto var(--space-8);
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+.hero-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 30px rgba(124, 58, 237, 0.5));
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/**
  * Hero title - Hovedoverskrift
  * Stor, bold og iøynefallende
  */
@@ -149,18 +175,34 @@
 /* ==================== */
 
 /**
- * Placeholder for illustrasjon
- * Kan fylles med SVG eller bilde senere
+ * Hero illustrasjon
  */
 .hero-illustration {
   position: absolute;
-  right: -100px;
+  right: -50px;
   top: 50%;
   transform: translateY(-50%);
-  width: 400px;
-  height: 400px;
-  opacity: 0.1;
+  width: 500px;
+  height: 500px;
+  opacity: 0.15;
   pointer-events: none; /* Ikke blokkerer klikk */
+  z-index: 0;
+}
+
+.hero-illustration img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 /* ==================== */
@@ -174,6 +216,11 @@
   .hero {
     min-height: calc(100vh - var(--header-height));
     padding: var(--space-12) var(--space-4);
+  }
+
+  .hero-logo {
+    width: 100px;
+    height: 100px;
   }
 
   .hero-title {
@@ -198,6 +245,11 @@
  * Mobil
  */
 @media (max-width: 480px) {
+  .hero-logo {
+    width: 80px;
+    height: 80px;
+  }
+
   .hero-title {
     font-size: var(--text-3xl); /* 30px */
   }

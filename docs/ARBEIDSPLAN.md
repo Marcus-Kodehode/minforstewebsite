@@ -118,18 +118,18 @@ Oppgradere eksisterende website med fokus på:
 - [x] Forbedre scroll-to-top button
 - [x] Legg til loading states
 
-### Fase 5: Innhold & Læring
-- [ ] Skriv omfattende kommentarer i alle filer
-- [ ] Legg til code examples i playground
-- [ ] Dokumenter HTML konsepter
-- [ ] Dokumenter CSS konsepter
-- [ ] Dokumenter JavaScript konsepter
-- [ ] Lag header/footer kommentarer i alle filer
+### Fase 5: Innhold & Læring ✅
+- [x] Skriv omfattende kommentarer i alle filer
+- [x] Legg til code examples i playground
+- [x] Dokumenter HTML konsepter
+- [x] Dokumenter CSS konsepter
+- [x] Dokumenter JavaScript konsepter
+- [x] Lag header/footer kommentarer i alle filer
 
-### Fase 6: Bilder & Assets
-- [ ] Planlegg nødvendige bilder/ikoner
-- [ ] Lag placeholder referanser
-- [ ] Dokumenter hva som trengs i BILDER_PLAN.md
+### Fase 6: Bilder & Assets ✅
+- [x] Planlegg nødvendige bilder/ikoner
+- [x] Lag placeholder referanser
+- [x] Dokumenter hva som trengs i BILDER_PLAN.md
 
 ### Fase 7: Testing & Polering
 - [ ] Test på ulike skjermstørrelser

@@ -175,12 +175,19 @@ function initHeaderScroll() {
 function initMobileMenu() {
   if (!mobileMenuBtn) return; // Hvis knappen ikke finnes, avslutt
   
+  const menuIcon = document.getElementById('menuIcon');
+  
   mobileMenuBtn.addEventListener('click', () => {
     // Toggle "open" klasse på nav list
     const isOpen = navList.classList.toggle('open');
     
     // Oppdater aria-expanded for accessibility
     mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+    
+    // Bytt ikon
+    if (menuIcon) {
+      menuIcon.src = isOpen ? '/assets/icons/close.png' : '/assets/icons/menu.png';
+    }
     
     // Forhindre scrolling når menu er åpen
     if (isOpen) {
@@ -195,6 +202,9 @@ function initMobileMenu() {
     if (!e.target.closest('header') && navList.classList.contains('open')) {
       navList.classList.remove('open');
       mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      if (menuIcon) {
+        menuIcon.src = '/assets/icons/menu.png';
+      }
       document.body.style.overflow = '';
     }
   });

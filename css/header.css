@@ -197,53 +197,28 @@ nav {
 }
 
 /**
- * Hamburger icon - Tre streker
- * Lages med ::before, element selv, og ::after
+ * Hamburger icon - Bilde eller CSS
  */
-.hamburger,
-.hamburger::before,
-.hamburger::after {
+.hamburger {
   width: 25px;
-  height: 2px;
-  background-color: var(--text-primary);
+  height: 25px;
+  position: relative;
   transition: all var(--transition-base);
 }
 
-.hamburger {
-  position: relative;
-}
-
-.hamburger::before,
-.hamburger::after {
-  content: '';
-  position: absolute;
-  left: 0;
-}
-
-.hamburger::before {
-  top: -8px;
-}
-
-.hamburger::after {
-  top: 8px;
+.hamburger img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all var(--transition-base);
 }
 
 /**
  * Hamburger animasjon når menu er åpen
- * Midterste linje forsvinner, topp og bunn roterer til X
+ * Bytter til close ikon
  */
-.mobile-menu-btn[aria-expanded="true"] .hamburger {
-  background-color: transparent;
-}
-
-.mobile-menu-btn[aria-expanded="true"] .hamburger::before {
-  top: 0;
-  transform: rotate(45deg);
-}
-
-.mobile-menu-btn[aria-expanded="true"] .hamburger::after {
-  top: 0;
-  transform: rotate(-45deg);
+.mobile-menu-btn[aria-expanded="true"] .hamburger img {
+  transform: rotate(90deg);
 }
 
 /* ==================== */

@@ -10,31 +10,37 @@
 ### Logo & Branding
 
 #### 1. Logo/Ikon
-- **Filnavn:** `logoNordisk`
-- **Plassering:** `assets/images/logoNordisk.png`
-- **Størrelse:** 200x200px (SVG foretrukket)
+- **Filnavn:** `logoNordisk.png`
+- **Plassering:** `assets/icons/logoNordisk.png`
+- **Størrelse:** 200x200px
 - **Beskrivelse:** Hovedlogo for nettsiden, brukes i header
-- **Farger:** Skal passe med mørk bakgrunn
-- **Status:** 🔴 Må lages
+- **Farger:** Passer med mørk bakgrunn
+- **Status:** ✅ Ferdig
 
 #### 2. Favicon
-- **Filnavn:** `favicon.ico`
-- **Plassering:** rot-mappen
-- **Størrelse:** 32x32px (ico), skalerbar (svg)
+- **Filnavn:** `logoNordisk.png`
+- **Plassering:** `assets/icons/logoNordisk.png`
+- **Størrelse:** Bruker samme som logo
 - **Beskrivelse:** Ikon som vises i browser tab
-- **Status:** 🔴 Må lages
+- **Status:** ✅ Ferdig (bruker logo)
 
 ---
 
 ### Hero Section
 
 #### 3. Hero Bakgrunnsbilde/Illustrasjon
-- **Filnavn:** `hero-bg.svg` eller `hero-illustration.svg`
-- **Plassering:** `assets/images/`
-- **Størrelse:** 1920x1080px (eller SVG)
-- **Beskrivelse:** Dekorativ bakgrunn eller illustrasjon for hero section
-- **Forslag:** Abstrakt gradient, geometriske former, eller kode-relatert illustrasjon
-- **Status:** 🔴 Må lages
+- **Filnavn:** `hero-bg.svg`
+- **Plassering:** `assets/images/hero-bg.svg`
+- **Størrelse:** SVG (skalerbar)
+- **Beskrivelse:** Moderne kode-tema illustrasjon med:
+  - Gradient bakgrunn
+  - Glow effekter i brand farger (lilla, cyan, amber)
+  - Kode snippets (HTML, CSS, JavaScript)
+  - Geometriske former og mønstre
+  - Grid pattern og dots
+  - Floating code blocks
+- **Implementering:** Floating animasjon med opacity 0.15
+- **Status:** ✅ Ferdig og optimalisert!
 
 implementering eksempel (kan forbedres/perfeksjoneres):
 .hero {
@@ -78,116 +84,132 @@ implementering eksempel (kan forbedres/perfeksjoneres):
 ### Feature Ikoner
 
 #### 4. HTML Ikon
-- **Filnavn:** `icon-html.svg`
-- **Plassering:** `assets/icons/`
-- **Størrelse:** 64x64px (SVG)
+- **Filnavn:** `html.png`
+- **Plassering:** `assets/icons/html.png`
+- **Størrelse:** 64x64px (PNG)
 - **Beskrivelse:** Representerer HTML konsepter
-- **Status:** 🔴 Må lages
+- **Bruk:** About section
+- **Status:** ✅ Ferdig
 
 #### 5. CSS Ikon
-- **Filnavn:** `icon-css.png`
-- **Plassering:** `assets/icons/`
-- **Størrelse:** 64x64px (png)
+- **Filnavn:** `css.png`
+- **Plassering:** `assets/icons/css.png`
+- **Størrelse:** 64x64px (PNG)
 - **Beskrivelse:** Representerer CSS konsepter
-- **Status:** 🔴 Må lages
+- **Bruk:** About section
+- **Status:** ✅ Ferdig
 
 #### 6. JavaScript Ikon
-- **Filnavn:** `icon-javascript.png`
-- **Plassering:** `assets/icons/`
-- **Størrelse:** 64x64px (png)
+- **Filnavn:** `javascript.png`
+- **Plassering:** `assets/icons/javascript.png`
+- **Størrelse:** 64x64px (PNG)
 - **Beskrivelse:** Representerer JavaScript konsepter
-- **Status:** 🔴 Må lages
+- **Bruk:** About section
+- **Status:** ✅ Ferdig
 
 #### 7. Responsive Ikon
-- **Filnavn:** `icon-responsive.png`
-- **Plassering:** `assets/icons/`
-- **Størrelse:** 64x64px (png)
+- **Filnavn:** `responsive.png`
+- **Plassering:** `assets/icons/responsive.png`
+- **Størrelse:** 64x64px (PNG)
 - **Beskrivelse:** Representerer responsive design
-- **Status:** 🔴 Må lages
+- **Bruk:** Features section
+- **Status:** ✅ Ferdig
 
 #### 8. Interactive Ikon
-- **Filnavn:** `icon-interactive.png`
-- **Plassering:** `assets/icons/`
-- **Størrelse:** 64x64px (png)
+- **Filnavn:** `interactive.png`
+- **Plassering:** `assets/icons/interactive.png`
+- **Størrelse:** 64x64px (PNG)
 - **Beskrivelse:** Representerer interaktivitet
-- **Status:** 🔴 Må lages
+- **Bruk:** Features section
+- **Status:** ✅ Ferdig
 
 #### 9. Modern Ikon
-- **Filnavn:** `icon-modern.png`
-- **Plassering:** `assets/icons/`
-- **Størrelse:** 64x64px (png)
+- **Filnavn:** `modern.png`
+- **Plassering:** `assets/icons/modern.png`
+- **Størrelse:** 64x64px (PNG)
 - **Beskrivelse:** Representerer moderne design
-- **Status:** 🔴 Må lages
+- **Bruk:** Features section
+- **Status:** ✅ Ferdig
 
 ---
 
 ### People Cards
 
-#### 10. Avatar Placeholder
-- **Filnavn:** `avatar-placeholder.svg`
-- **Plassering:** `assets/images/`
-- **Størrelse:** 200x200px (SVG)
-- **Beskrivelse:** Standard avatar for people cards
-- **Forslag:** Enkel silhuett eller initialer
-- **Status:** 🔴 Må lages
+#### 10. Avatar Mann
+- **Filnavn:** `avatar-man.png`
+- **Plassering:** `assets/images/avatar-man.png`
+- **Størrelse:** 200x200px (PNG)
+- **Beskrivelse:** Avatar for mannlige personer
+- **Bruk:** People cards (dynamisk basert på kjønn)
+- **Status:** ✅ Ferdig
 
-#### 11. Avatar Bilder (valgfritt)
-- **Filnavn:** `avatar-[navn].jpg/png`
-- **Plassering:** `assets/images/avatars/`
-- **Størrelse:** 200x200px
-- **Beskrivelse:** Individuelle avatars for hver person i people.json
-- **Antall:** 11 personer
-- **Status:** 🟡 Valgfritt (kan bruke placeholder)
+#### 11. Avatar Kvinne
+- **Filnavn:** `avatar-kvinne.png`
+- **Plassering:** `assets/images/avatar-kvinne.png`
+- **Størrelse:** 200x200px (PNG)
+- **Beskrivelse:** Avatar for kvinnelige personer
+- **Bruk:** People cards (dynamisk basert på kjønn)
+- **Status:** ✅ Ferdig
 
----
-
-### Dekorative Elementer
-
-#### 12. Geometriske Former
-- **Filnavn:** `shape-circle.svg`, `shape-triangle.svg`, etc.
-- **Plassering:** `assets/images/shapes/`
-- **Størrelse:** Varierende (SVG)
-- **Beskrivelse:** Dekorative former for bakgrunner
-- **Status:** 🟡 Valgfritt
-
-#### 13. Kode Snippet Illustrasjon
-- **Filnavn:** `code-illustration.svg`
-- **Plassering:** `assets/images/`
-- **Størrelse:** Varierende (SVG)
-- **Beskrivelse:** Stilisert kode-snippet som dekorasjon
-- **Status:** 🟡 Valgfritt
+#### 12. Goblin Avatar (Easter Egg)
+- **Filnavn:** `goblin-avatar.png`
+- **Plassering:** `assets/images/goblin-avatar.png`
+- **Størrelse:** 200x200px (PNG)
+- **Beskrivelse:** Spesiell avatar for Joakim - mystisk goblin fra Eldoria
+- **Bruk:** People cards (Joakim med spesiell styling og animasjon)
+- **Status:** ✅ Ferdig og implementert!
 
 ---
 
 ### UI Ikoner
 
-#### 14. Meny Ikon (Hamburger)
-- **Filnavn:** `icon-menu.png`
-- **Plassering:** `assets/icons/`
-- **Størrelse:** 24x24px (png)
+#### 13. Meny Ikon (Hamburger)
+- **Filnavn:** `menu.png`
+- **Plassering:** `assets/icons/menu.png`
+- **Størrelse:** 24x24px (PNG)
 - **Beskrivelse:** Hamburger meny for mobil
-- **Status:** 🔴 Må lages
+- **Bruk:** Mobile navigation button
+- **Status:** ✅ Ferdig
 
-#### 15. Lukk Ikon (X)
-- **Filnavn:** `icon-close.png`
-- **Plassering:** `assets/icons/`
-- **Størrelse:** 24x24px (png)
+#### 14. Lukk Ikon (X)
+- **Filnavn:** `close.png`
+- **Plassering:** `assets/icons/close.png`
+- **Størrelse:** 24x24px (PNG)
 - **Beskrivelse:** Lukk knapp for modal/meny
-- **Status:** 🔴 Må lages
+- **Bruk:** Mobile navigation (når åpen)
+- **Status:** ✅ Ferdig
 
-#### 16. Søk Ikon
-- **Filnavn:** `icon-search.png`
-- **Plassering:** `assets/icons/`
-- **Størrelse:** 24x24px (png)
+#### 15. Søk Ikon
+- **Filnavn:** `search.png`
+- **Plassering:** `assets/icons/search.png`
+- **Størrelse:** 24x24px (PNG)
 - **Beskrivelse:** Søk ikon for filter funksjon
-- **Status:** 🔴 Må lages
+- **Bruk:** People section search box
+- **Status:** ✅ Ferdig
 
-#### 17. Filter Ikon
-- **Filnavn:** `icon-filter.png`
-- **Plassering:** `assets/icons/`
-- **Størrelse:** 24x24px (png)
+#### 16. Filter Ikon
+- **Filnavn:** `filter.png`
+- **Plassering:** `assets/icons/filter.png`
+- **Størrelse:** 24x24px (PNG)
 - **Beskrivelse:** Filter ikon
-- **Status:** 🔴 Må lages
+- **Bruk:** People section filter buttons
+- **Status:** ✅ Ferdig
+
+#### 17. Wheelchair Ikon
+- **Filnavn:** `wheel-chair.png`
+- **Plassering:** `assets/icons/wheel-chair.png`
+- **Størrelse:** 64x64px (PNG)
+- **Beskrivelse:** Tilgjengelighet ikon
+- **Bruk:** Features section (Accessibility)
+- **Status:** ✅ Ferdig
+
+#### 18. Books Ikon
+- **Filnavn:** `books.png`
+- **Plassering:** `assets/icons/books.png`
+- **Størrelse:** 64x64px (PNG)
+- **Beskrivelse:** Dokumentasjon ikon
+- **Bruk:** Features section (Godt Dokumentert)
+- **Status:** ✅ Ferdig
 
 ---
 
@@ -226,24 +248,38 @@ Tekst: #e2e8f0 (lys grå)
 
 ---
 
-## ✅ Prioritering
+## ✅ Status Oppsummering
 
-### Høy Prioritet (Må ha)
-1. Logo/Ikon
-2. Favicon
-3. HTML/CSS/JS ikoner
-4. Avatar placeholder
-5. Meny/Lukk ikoner
+### ✅ Ferdig (18 assets)
+1. ✅ Logo/Ikon (logoNordisk.png) - Header, favicon OG hero section
+2. ✅ Favicon (bruker logo)
+3. ✅ Hero illustrasjon (hero-bg.svg)
+4. ✅ HTML ikon (html.png)
+5. ✅ CSS ikon (css.png)
+6. ✅ JavaScript ikon (javascript.png)
+7. ✅ Responsive ikon (responsive.png)
+8. ✅ Interactive ikon (interactive.png)
+9. ✅ Modern ikon (modern.png)
+10. ✅ Wheelchair ikon (wheel-chair.png) - NY!
+11. ✅ Books ikon (books.png) - NY!
+12. ✅ Avatar mann (avatar-man.png)
+13. ✅ Avatar kvinne (avatar-kvinne.png)
+14. ✅ Goblin avatar (goblin-avatar.png) - Easter egg for Joakim!
+15. ✅ Meny ikon (menu.png)
+16. ✅ Lukk ikon (close.png)
+17. ✅ Søk ikon (search.png) - Også brukt i features!
+18. ✅ Filter ikon (filter.png)
 
-### Medium Prioritet (Bør ha)
-6. Hero illustrasjon
-7. Feature ikoner (responsive, interactive, modern)
-8. Søk/Filter ikoner
+### 🎉 Alle assets er på plass og implementert!
 
-### Lav Prioritet (Nice to have)
-9. Individuelle avatars
-10. Dekorative elementer
-11. Kode illustrasjoner
+**Implementert i koden:**
+- Logo i header, favicon OG stor versjon i hero section med floating animasjon
+- Hero illustrasjon med floating animasjon
+- HTML/CSS/JS ikoner i about section
+- Feature ikoner i features section (inkl. wheelchair, books, search)
+- Avatars i people cards (dynamisk basert på kjønn + spesiell goblin for Joakim)
+- UI ikoner (menu, close, search, filter)
+- Spesiell goblin styling med pulserende animasjon for Joakim
 
 ---
 

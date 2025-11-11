@@ -92,22 +92,22 @@
  * About icon - Ikon container
  */
 .about-icon {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto var(--space-6);
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   border-radius: var(--radius-xl);
-  padding: var(--space-4);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-lg);
 }
 
 .about-icon img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: brightness(0) invert(1); /* Gjør ikoner hvite */
 }
 
 /**

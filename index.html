@@ -47,8 +47,7 @@
     <title>Min Første Website | Lær HTML, CSS & JavaScript</title>
     
     <!-- Favicon - Lite ikon i browser tab -->
-    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
-    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+    <link rel="icon" type="image/png" href="/assets/icons/logoNordisk.png" />
     
     <!-- Preconnect - Kobler til Google Fonts raskere -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -93,7 +92,7 @@
         <div class="logo">
           <a href="#top" aria-label="Gå til toppen av siden">
             <img
-              src="/assets/images/logo.svg"
+              src="/assets/icons/logoNordisk.png"
               alt="Min Første Website Logo"
               width="60"
               height="60"
@@ -125,9 +124,11 @@
             </li>
           </ul>
 
-          <!-- Mobile menu button (for senere implementering) -->
+          <!-- Mobile menu button -->
           <button class="mobile-menu-btn" aria-label="Åpne meny" aria-expanded="false">
-            <span class="hamburger"></span>
+            <span class="hamburger">
+              <img src="/assets/icons/menu.png" alt="" id="menuIcon" />
+            </span>
           </button>
         </nav>
       </div>
@@ -152,6 +153,11 @@
       -->
       <section class="hero" aria-label="Hero section">
         <div class="hero-content">
+          <!-- Logo display -->
+          <div class="hero-logo">
+            <img src="/assets/icons/LogoNordiskNoText.png" alt="Min Første Website Logo" />
+          </div>
+          
           <h1 id="heading" class="hero-title">
             Velkommen til <span class="gradient-text">Min Første Website</span>
           </h1>
@@ -170,9 +176,9 @@
           </div>
         </div>
         
-        <!-- Dekorativ illustrasjon (legges til senere) -->
+        <!-- Dekorativ illustrasjon -->
         <div class="hero-illustration" aria-hidden="true">
-          <!-- SVG illustrasjon kommer her -->
+          <img src="/assets/images/hero-bg.svg" alt="" />
         </div>
       </section>
 
@@ -193,8 +199,7 @@
           <div class="about-grid">
             <div class="about-card">
               <div class="about-icon">
-                <img src="/assets/icons/icon-html.svg" alt="" aria-hidden="true" 
-                     onerror="this.style.display='none'" />
+                <img src="/assets/icons/html.png" alt="HTML5 ikon" />
               </div>
               <h3>Semantisk HTML5</h3>
               <p>
@@ -205,8 +210,7 @@
 
             <div class="about-card">
               <div class="about-icon">
-                <img src="/assets/icons/icon-css.svg" alt="" aria-hidden="true"
-                     onerror="this.style.display='none'" />
+                <img src="/assets/icons/css.png" alt="CSS3 ikon" />
               </div>
               <h3>Moderne CSS</h3>
               <p>
@@ -217,8 +221,7 @@
 
             <div class="about-card">
               <div class="about-icon">
-                <img src="/assets/icons/icon-javascript.svg" alt="" aria-hidden="true"
-                     onerror="this.style.display='none'" />
+                <img src="/assets/icons/javascript.png" alt="JavaScript ikon" />
               </div>
               <h3>Interaktiv JavaScript</h3>
               <p>
@@ -246,42 +249,54 @@
           <div class="features-grid">
             <!-- Feature 1 -->
             <div class="feature-card">
-              <div class="feature-icon">📱</div>
+              <div class="feature-icon">
+                <img src="/assets/icons/responsive.png" alt="Responsive design ikon" />
+              </div>
               <h3>Responsive Design</h3>
               <p>Fungerer perfekt på mobil, tablet og desktop</p>
             </div>
 
             <!-- Feature 2 -->
             <div class="feature-card">
-              <div class="feature-icon">🎨</div>
+              <div class="feature-icon">
+                <img src="/assets/icons/modern.png" alt="Moderne design ikon" />
+              </div>
               <h3>Moderne UI/UX</h3>
               <p>Behagelige farger, smooth animasjoner og god kontrast</p>
             </div>
 
             <!-- Feature 3 -->
             <div class="feature-card">
-              <div class="feature-icon">⚡</div>
+              <div class="feature-icon">
+                <img src="/assets/icons/interactive.png" alt="Interaktivitet ikon" />
+              </div>
               <h3>Interaktivitet</h3>
               <p>Klikk, hover, scroll - alt reagerer på brukerens handlinger</p>
             </div>
 
             <!-- Feature 4 -->
             <div class="feature-card">
-              <div class="feature-icon">♿</div>
+              <div class="feature-icon">
+                <img src="/assets/icons/wheel-chair.png" alt="Tilgjengelighet ikon" />
+              </div>
               <h3>Tilgjengelighet</h3>
               <p>Bygget med accessibility i tankene fra starten</p>
             </div>
 
             <!-- Feature 5 -->
             <div class="feature-card">
-              <div class="feature-icon">🔍</div>
+              <div class="feature-icon">
+                <img src="/assets/icons/search.png" alt="SEO ikon" />
+              </div>
               <h3>SEO Optimalisert</h3>
               <p>Riktige meta tags og semantisk struktur</p>
             </div>
 
             <!-- Feature 6 -->
             <div class="feature-card">
-              <div class="feature-icon">📚</div>
+              <div class="feature-icon">
+                <img src="/assets/icons/books.png" alt="Dokumentasjon ikon" />
+              </div>
               <h3>Godt Dokumentert</h3>
               <p>Omfattende kommentarer som forklarer alt</p>
             </div>
@@ -396,6 +411,7 @@
           <!-- Filter/Search controls -->
           <div class="people-controls">
             <div class="search-box">
+              <img src="/assets/icons/search.png" alt="" class="search-icon" aria-hidden="true" />
               <input 
                 type="text" 
                 id="searchInput" 
@@ -404,6 +420,7 @@
             </div>
             
             <div class="filter-buttons">
+              <img src="/assets/icons/filter.png" alt="" class="filter-icon" aria-hidden="true" />
               <button class="filter-btn active" data-filter="all">Alle</button>
               <button class="filter-btn" data-filter="male">Menn</button>
               <button class="filter-btn" data-filter="female">Kvinner</button>

@@ -140,12 +140,32 @@ function createCard(person) {
   const card = document.createElement('div');
   card.classList.add('card');
   
+  // Velg avatar basert på kjønn (med spesiell håndtering for Joakim)
+  let avatarSrc;
+  let genderText;
+  let ageText;
+  
+  if (person.isMale === 'goblin') {
+    // Spesiell håndtering for Joakim
+    avatarSrc = '/assets/images/goblin-avatar.png';
+    genderText = '🧙‍♂️ Mystisk Goblin';
+    ageText = person.age; // "too old"
+  } else {
+    avatarSrc = person.isMale 
+      ? '/assets/images/avatar-man.png' 
+      : '/assets/images/avatar-kvinne.png';
+    genderText = person.isMale ? 'Mann' : 'Kvinne';
+    ageText = `${person.age} år`;
+  }
+  
   // Template literal - string med variabler
-  // Ternary operator: condition ? true : false
   card.innerHTML = `
+    <div class="card-avatar ${person.isMale === 'goblin' ? 'goblin-avatar' : ''}">
+      <img src="${avatarSrc}" alt="${person.name} avatar" />
+    </div>
     <h2 class="cardHeading">${person.name}</h2>
-    <p><strong>Alder:</strong> ${person.age} år</p>
-    <p><strong>Kjønn:</strong> ${person.isMale ? 'Mann' : 'Kvinne'}</p>
+    <p><strong>Alder:</strong> ${ageText}</p>
+    <p><strong>Kjønn:</strong> ${genderText}</p>
     <p><strong>Hobbyer:</strong> ${person.hobbies.join(', ')}</p>
   `;
   
@@ -155,7 +175,8 @@ function createCard(person) {
   });
   
   // Legg til hover effekt med data attributt
-  card.setAttribute('data-gender', person.isMale ? 'male' : 'female');
+  const genderAttr = person.isMale === 'goblin' ? 'goblin' : (person.isMale ? 'male' : 'female');
+  card.setAttribute('data-gender', genderAttr);
   
   return card;
 }
@@ -248,11 +269,34 @@ export function searchCards(searchTerm) {
 function showPersonDetails(person) {
   // Import modal funksjon
   import('./modal.js').then(module => {
+    let avatarSrc;
+    let genderText;
+    let ageText;
+    let borderColor = 'var(--primary-color)';
+    
+    if (person.isMale === 'goblin') {
+      avatarSrc = '/assets/images/goblin-avatar.png';
+      genderText = '🧙‍♂️ Mystisk Goblin fra Eldoria';
+      ageText = person.age;
+      borderColor = 'var(--accent-color)';
+    } else {
+      avatarSrc = person.isMale 
+        ? '/assets/images/avatar-man.png' 
+        : '/assets/images/avatar-kvinne.png';
+      genderText = person.isMale ? 'Mann' : 'Kvinne';
+      ageText = `${person.age} år`;
+    }
+    
     const content = `
-      <h2>${person.name}</h2>
+      <div style="text-align: center;">
+        <div style="width: 120px; height: 120px; margin: 0 auto 1.5rem; border-radius: 50%; overflow: hidden; border: 4px solid ${borderColor};">
+          <img src="${avatarSrc}" alt="${person.name}" style="width: 100%; height: 100%; object-fit: cover;" />
+        </div>
+        <h2>${person.name}</h2>
+      </div>
       <div style="margin-top: 1.5rem;">
-        <p><strong>Alder:</strong> ${person.age} år</p>
-        <p><strong>Kjønn:</strong> ${person.isMale ? 'Mann' : 'Kvinne'}</p>
+        <p><strong>Alder:</strong> ${ageText}</p>
+        <p><strong>Kjønn:</strong> ${genderText}</p>
         <p><strong>Hobbyer:</strong></p>
         <ul style="list-style: disc; margin-left: 1.5rem; color: var(--text-secondary);">
           ${person.hobbies.map(hobby => `<li>${hobby}</li>`).join('')}

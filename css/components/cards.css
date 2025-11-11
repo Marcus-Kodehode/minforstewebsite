@@ -65,6 +65,54 @@
 /* ==================== */
 
 /**
+ * Card avatar - Person bilde
+ */
+.card-avatar {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--space-4);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 3px solid var(--primary-color);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.card-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/**
+ * Goblin avatar - Spesiell styling for Joakim
+ */
+.card-avatar.goblin-avatar {
+  border-color: var(--accent-color);
+  box-shadow: var(--glow-accent);
+  animation: goblinPulse 2s ease-in-out infinite;
+}
+
+@keyframes goblinPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: var(--glow-accent);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(245, 158, 11, 0.8);
+  }
+}
+
+/**
+ * Goblin card hover
+ */
+.card[data-gender="goblin"]:hover {
+  border-color: var(--accent-color);
+  box-shadow: var(--shadow-xl), var(--glow-accent);
+}
+
+/**
  * Card heading - Person navn
  */
 .card-heading,
@@ -73,6 +121,7 @@
   font-weight: var(--font-bold);
   color: var(--text-primary);
   margin-bottom: var(--space-2);
+  text-align: center;
 }
 
 /**

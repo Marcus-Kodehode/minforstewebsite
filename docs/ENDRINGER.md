@@ -65,9 +65,37 @@ Dette dokumentet holder oversikt over alle endringer gjort i oppgraderingen fra 
 - ✅ Lagt til achievement system i playground
 - ✅ Forbedret console logging med styling
 
+#### Fase 6: Bilder & Assets ✅
+- ✅ Integrert logo (logoNordisk.png) i header, favicon OG hero section
+- ✅ Integrert hero illustrasjon (hero-bg.svg) med floating animasjon
+- ✅ Optimalisert hero-bg.svg med moderne kode-tema design
+- ✅ Integrert HTML/CSS/JS ikoner i about section
+- ✅ Integrert feature ikoner (responsive, interactive, modern, wheelchair, books, search)
+- ✅ Integrert avatars i people cards (dynamisk basert på kjønn)
+- ✅ Integrert UI ikoner (menu, close, search, filter)
+- ✅ Lagt til Joakim - mystisk goblin fra Eldoria (Easter egg!)
+- ✅ Spesiell goblin styling med pulserende animasjon
+- ✅ Stor logo i hero section med floating animasjon
+- ✅ Oppdatert CSS for bedre ikon visning
+- ✅ Oppdatert JavaScript for dynamisk avatar valg (inkl. goblin)
+- ✅ Oppdatert BILDER_PLAN.md med alle 18 assets
+
+**Hero SVG Forbedringer:**
+- Gradient bakgrunn med brand farger
+- Glow effekter (lilla, cyan, amber)
+- Kode snippets (HTML tags, CSS properties, JavaScript functions)
+- Geometriske former og mønstre
+- Grid pattern for struktur
+- Floating code blocks med syntax highlighting
+- Dots pattern for tekstur
+- Curved lines for flow
+- Glow filter for highlight circles
+
 #### Status
-- ✅ Fase 1, 2, 3, 4, 5 fullført!
-- 🎯 Neste: Fase 6 (Bilder & Assets) eller Fase 7 (Testing)
+- ✅ Fase 1, 2, 3, 4, 5, 6 fullført!
+- 🎉 18 assets integrert og funksjonelle!
+- 🎨 Hero SVG optimalisert og moderne!
+- 🎯 Neste: Fase 7 (Testing & Polering)
 
 ---
 
