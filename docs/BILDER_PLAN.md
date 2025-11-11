@@ -10,15 +10,15 @@
 ### Logo & Branding
 
 #### 1. Logo/Ikon
-- **Filnavn:** `logo.svg` eller `logo.png`
-- **Plassering:** `assets/images/`
+- **Filnavn:** `logoNordisk`
+- **Plassering:** `assets/images/logoNordisk.png`
 - **Størrelse:** 200x200px (SVG foretrukket)
 - **Beskrivelse:** Hovedlogo for nettsiden, brukes i header
 - **Farger:** Skal passe med mørk bakgrunn
 - **Status:** 🔴 Må lages
 
 #### 2. Favicon
-- **Filnavn:** `favicon.ico` + `favicon.svg`
+- **Filnavn:** `favicon.ico`
 - **Plassering:** rot-mappen
 - **Størrelse:** 32x32px (ico), skalerbar (svg)
 - **Beskrivelse:** Ikon som vises i browser tab

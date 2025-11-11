@@ -86,12 +86,12 @@ Oppgradere eksisterende website med fokus på:
 - [x] Oppdater base.css med bedre resets og defaults
 - [x] Lag utilities.css med hjelpeklasser
 
-### Fase 2: HTML Struktur
-- [ ] Oppdater index.html med semantisk HTML5
-- [ ] Legg til meta tags (description, keywords, author)
-- [ ] Strukturer sections: Hero, About, Features, Playground, People, Contact
-- [ ] Legg til footer med informasjon
-- [ ] Forbedre accessibility (ARIA labels, alt tekster)
+### Fase 2: HTML Struktur ✅
+- [x] Oppdater index.html med semantisk HTML5
+- [x] Legg til meta tags (description, keywords, author)
+- [x] Strukturer sections: Hero, About, Features, Playground, People, Contact
+- [x] Legg til footer med informasjon
+- [x] Forbedre accessibility (ARIA labels, alt tekster)
 
 ### Fase 3: CSS Styling
 - [ ] Implementer moderne fargepalett (mørk tema)
