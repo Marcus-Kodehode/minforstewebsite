@@ -41,37 +41,59 @@
   background-color: var(--bg-tertiary);
   border-bottom: 1px solid var(--border-color);
   overflow-x: auto; /* Scroll på mobil */
+  gap: var(--space-1);
+  padding: var(--space-2);
+  
+  /* Smooth scrolling på mobil */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbar but keep functionality */
+.tabs::-webkit-scrollbar {
+  height: 4px;
+}
+
+.tabs::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+.tabs::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: var(--radius-full);
 }
 
 /**
  * Tab button
  */
 .tab-btn {
-  flex: 1;
-  padding: var(--space-4) var(--space-6);
-  background-color: transparent;
+  flex-shrink: 0; /* Ikke krymp tabs */
+  padding: var(--space-3) var(--space-5);
+  background-color: var(--bg-secondary);
   color: var(--text-secondary);
-  border: none;
-  border-bottom: 3px solid transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
   cursor: pointer;
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   font-weight: var(--font-medium);
   transition: all var(--transition-base);
   white-space: nowrap; /* Ikke wrap tekst */
 }
 
 .tab-btn:hover {
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-primary);
   color: var(--text-primary);
+  border-color: var(--border-light);
 }
 
 /**
  * Active tab
  */
 .tab-btn.active {
-  color: var(--primary-color);
-  border-bottom-color: var(--primary-color);
-  background-color: var(--bg-secondary);
+  color: white;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-md);
 }
 
 /* ==================== */
@@ -227,8 +249,12 @@ code {
   }
 
   .tab-btn {
-    padding: var(--space-3) var(--space-4);
-    font-size: var(--text-sm);
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-xs);
+  }
+  
+  .tabs {
+    padding: var(--space-1);
   }
 }
 

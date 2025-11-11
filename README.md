@@ -219,8 +219,8 @@ Dette prosjektet er laget for læring og kan brukes fritt.
 
 **[Ditt Navn]**
 
-- GitHub: [@dinbruker](https://github.com/dinbruker)
-- Website: [dinwebsite.com](https://dinwebsite.com)
+- GitHub: [@Marcus-Kodehode](https://github.com/Marcus-Kodehode)
+- Website: [MoBo Digital](https://mobodigital.vercel.app/)
 
 ---
 

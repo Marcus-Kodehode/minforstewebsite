@@ -24,10 +24,16 @@ export function initPlayground() {
   console.log('🎮 Initialiserer playground...');
   
   initTabs();
+  initHTMLDemo();
+  initCSSDemo();
   initVariablesDemo();
   initFunctionsDemo();
+  initArraysDemo();
+  initObjectsDemo();
   initDOMDemo();
   initEventsDemo();
+  initAsyncDemo();
+  initStorageDemo();
   
   console.log('✅ Playground klar!');
 }
@@ -59,6 +65,209 @@ function initTabs() {
       }
     });
   });
+}
+
+/**
+ * ==========================================
+ * HTML DEMO
+ * ==========================================
+ */
+
+function initHTMLDemo() {
+  const tagsBtn = document.getElementById('htmlTagsBtn');
+  const formBtn = document.getElementById('htmlFormBtn');
+  const listBtn = document.getElementById('htmlListBtn');
+  const output = document.getElementById('htmlOutput');
+  
+  if (!output) return;
+  
+  // Semantic tags demo
+  if (tagsBtn) {
+    tagsBtn.addEventListener('click', () => {
+      output.innerHTML = `
+        <p><strong>Semantiske HTML5 Tags:</strong></p>
+        <pre style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; overflow-x: auto;"><code>&lt;header&gt;  - Toppen av siden
+&lt;nav&gt;     - Navigasjon
+&lt;main&gt;    - Hovedinnhold
+&lt;section&gt; - Seksjon av innhold
+&lt;article&gt; - Selvstendig innhold
+&lt;aside&gt;   - Sidebar innhold
+&lt;footer&gt;  - Bunnen av siden</code></pre>
+        <div style="margin-top: 1rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px;">
+          <header style="background: var(--primary-color); padding: 0.5rem; border-radius: 4px; margin-bottom: 0.5rem;">
+            <strong>Header</strong>
+          </header>
+          <main style="background: var(--secondary-color); padding: 0.5rem; border-radius: 4px; margin-bottom: 0.5rem;">
+            <strong>Main Content</strong>
+          </main>
+          <footer style="background: var(--accent-color); padding: 0.5rem; border-radius: 4px;">
+            <strong>Footer</strong>
+          </footer>
+        </div>
+        <p style="color: var(--text-muted); margin-top: 1rem;">
+          Semantiske tags gjør HTML mer lesbar og bedre for SEO!
+        </p>
+      `;
+    });
+  }
+  
+  // Form demo
+  if (formBtn) {
+    formBtn.addEventListener('click', () => {
+      output.innerHTML = `
+        <p><strong>HTML Form Elements:</strong></p>
+        <pre style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; overflow-x: auto;"><code>&lt;form&gt;
+  &lt;label for="name"&gt;Navn:&lt;/label&gt;
+  &lt;input type="text" id="name" required&gt;
+  
+  &lt;label for="email"&gt;E-post:&lt;/label&gt;
+  &lt;input type="email" id="email"&gt;
+  
+  &lt;button type="submit"&gt;Send&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        <div style="margin-top: 1rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px;">
+          <form style="display: grid; gap: 0.5rem;" onsubmit="event.preventDefault(); alert('Form sendt!');">
+            <label style="color: var(--text-primary);">Navn: <input type="text" style="margin-left: 0.5rem; padding: 0.25rem; border-radius: 4px; border: 1px solid var(--border-color); background: var(--bg-primary); color: var(--text-primary);" required></label>
+            <label style="color: var(--text-primary);">E-post: <input type="email" style="margin-left: 0.5rem; padding: 0.25rem; border-radius: 4px; border: 1px solid var(--border-color); background: var(--bg-primary); color: var(--text-primary);"></label>
+            <button type="submit" style="padding: 0.5rem; background: var(--primary-color); color: white; border: none; border-radius: 4px; cursor: pointer;">Send</button>
+          </form>
+        </div>
+        <p style="color: var(--text-muted); margin-top: 1rem;">
+          Forms samler brukerinput. Prøv å sende formen!
+        </p>
+      `;
+    });
+  }
+  
+  // Lists demo
+  if (listBtn) {
+    listBtn.addEventListener('click', () => {
+      output.innerHTML = `
+        <p><strong>HTML Lists:</strong></p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+          <div>
+            <p style="color: var(--primary-color); font-weight: bold;">Unordered List (ul):</p>
+            <pre style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; font-size: 0.85rem;"><code>&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            <ul style="margin-left: 1.5rem; color: var(--text-secondary);">
+              <li>Kaffe</li>
+              <li>Te</li>
+              <li>Juice</li>
+            </ul>
+          </div>
+          <div>
+            <p style="color: var(--secondary-color); font-weight: bold;">Ordered List (ol):</p>
+            <pre style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; font-size: 0.85rem;"><code>&lt;ol&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+            <ol style="margin-left: 1.5rem; color: var(--text-secondary);">
+              <li>Først</li>
+              <li>Andre</li>
+              <li>Tredje</li>
+            </ol>
+          </div>
+        </div>
+        <p style="color: var(--text-muted); margin-top: 1rem;">
+          Bruk &lt;ul&gt; for punktlister og &lt;ol&gt; for nummererte lister.
+        </p>
+      `;
+    });
+  }
+}
+
+/**
+ * ==========================================
+ * CSS DEMO
+ * ==========================================
+ */
+
+function initCSSDemo() {
+  const flexBtn = document.getElementById('cssFlexBtn');
+  const gridBtn = document.getElementById('cssGridBtn');
+  const animBtn = document.getElementById('cssAnimBtn');
+  const output = document.getElementById('cssOutput');
+  
+  if (!output) return;
+  
+  // Flexbox demo
+  if (flexBtn) {
+    flexBtn.addEventListener('click', () => {
+      output.innerHTML = `
+        <p><strong>CSS Flexbox:</strong></p>
+        <pre style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; overflow-x: auto;"><code>.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}</code></pre>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 1rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; min-height: 100px;">
+          <div style="width: 60px; height: 60px; background: var(--primary-color); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">1</div>
+          <div style="width: 60px; height: 60px; background: var(--secondary-color); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">2</div>
+          <div style="width: 60px; height: 60px; background: var(--accent-color); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">3</div>
+        </div>
+        <p style="color: var(--text-muted); margin-top: 1rem;">
+          Flexbox er perfekt for 1-dimensjonale layouts (rad eller kolonne).
+        </p>
+      `;
+    });
+  }
+  
+  // Grid demo
+  if (gridBtn) {
+    gridBtn.addEventListener('click', () => {
+      output.innerHTML = `
+        <p><strong>CSS Grid:</strong></p>
+        <pre style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; overflow-x: auto;"><code>.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}</code></pre>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px;">
+          <div style="padding: 1rem; background: var(--primary-color); border-radius: 8px; text-align: center; color: white; font-weight: bold;">1</div>
+          <div style="padding: 1rem; background: var(--secondary-color); border-radius: 8px; text-align: center; color: white; font-weight: bold;">2</div>
+          <div style="padding: 1rem; background: var(--accent-color); border-radius: 8px; text-align: center; color: white; font-weight: bold;">3</div>
+          <div style="padding: 1rem; background: var(--accent-color); border-radius: 8px; text-align: center; color: white; font-weight: bold;">4</div>
+          <div style="padding: 1rem; background: var(--primary-color); border-radius: 8px; text-align: center; color: white; font-weight: bold;">5</div>
+          <div style="padding: 1rem; background: var(--secondary-color); border-radius: 8px; text-align: center; color: white; font-weight: bold;">6</div>
+        </div>
+        <p style="color: var(--text-muted); margin-top: 1rem;">
+          Grid er perfekt for 2-dimensjonale layouts (rader og kolonner).
+        </p>
+      `;
+    });
+  }
+  
+  // Animation demo
+  if (animBtn) {
+    animBtn.addEventListener('click', () => {
+      output.innerHTML = `
+        <p><strong>CSS Animation:</strong></p>
+        <pre style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; overflow-x: auto;"><code>@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.box {
+  animation: bounce 1s infinite;
+}</code></pre>
+        <div style="display: flex; justify-content: center; margin-top: 1rem; padding: 2rem; background: var(--bg-tertiary); border-radius: 8px;">
+          <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 12px; animation: bounce 1s ease-in-out infinite;"></div>
+        </div>
+        <style>
+          @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+          }
+        </style>
+        <p style="color: var(--text-muted); margin-top: 1rem;">
+          CSS animations gjør nettsider levende med smooth bevegelser!
+        </p>
+      `;
+    });
+  }
 }
 
 /**
@@ -328,22 +537,320 @@ if (!document.getElementById('achievement-styles')) {
 }
 
 /**
+ * ==========================================
+ * ARRAYS DEMO
+ * ==========================================
+ */
+
+function initArraysDemo() {
+  const mapBtn = document.getElementById('arrayMapBtn');
+  const filterBtn = document.getElementById('arrayFilterBtn');
+  const reduceBtn = document.getElementById('arrayReduceBtn');
+  const output = document.getElementById('arrayOutput');
+  
+  if (!output) return;
+  
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  
+  // Map demo
+  if (mapBtn) {
+    mapBtn.addEventListener('click', () => {
+      const doubled = numbers.map(n => n * 2);
+      output.innerHTML = `
+        <p><strong>Original array:</strong> [${numbers.join(', ')}]</p>
+        <p><strong>Map (doble alle):</strong> [${doubled.join(', ')}]</p>
+        <pre style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; margin-top: 1rem; overflow-x: auto;"><code>const doubled = numbers.map(n => n * 2);</code></pre>
+        <p style="color: var(--text-muted); margin-top: 1rem;">
+          <code>map()</code> lager et nytt array ved å kjøre en funksjon på hvert element.
+        </p>
+      `;
+    });
+  }
+  
+  // Filter demo
+  if (filterBtn) {
+    filterBtn.addEventListener('click', () => {
+      const evens = numbers.filter(n => n % 2 === 0);
+      output.innerHTML = `
+        <p><strong>Original array:</strong> [${numbers.join(', ')}]</p>
+        <p><strong>Filter (kun partall):</strong> [${evens.join(', ')}]</p>
+        <pre style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; margin-top: 1rem; overflow-x: auto;"><code>const evens = numbers.filter(n => n % 2 === 0);</code></pre>
+        <p style="color: var(--text-muted); margin-top: 1rem;">
+          <code>filter()</code> lager et nytt array med kun elementer som matcher condition.
+        </p>
+      `;
+    });
+  }
+  
+  // Reduce demo
+  if (reduceBtn) {
+    reduceBtn.addEventListener('click', () => {
+      const sum = numbers.reduce((total, n) => total + n, 0);
+      output.innerHTML = `
+        <p><strong>Original array:</strong> [${numbers.join(', ')}]</p>
+        <p><strong>Reduce (sum):</strong> ${sum}</p>
+        <pre style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; margin-top: 1rem; overflow-x: auto;"><code>const sum = numbers.reduce((total, n) => total + n, 0);</code></pre>
+        <p style="color: var(--text-muted); margin-top: 1rem;">
+          <code>reduce()</code> reduserer et array til én verdi ved å akkumulere resultater.
+        </p>
+      `;
+    });
+  }
+}
+
+/**
+ * ==========================================
+ * OBJECTS DEMO
+ * ==========================================
+ */
+
+function initObjectsDemo() {
+  const createBtn = document.getElementById('createObjectBtn');
+  const destructureBtn = document.getElementById('destructureBtn');
+  const spreadBtn = document.getElementById('spreadBtn');
+  const output = document.getElementById('objectOutput');
+  
+  if (!output) return;
+  
+  const person = {
+    name: 'Ola Nordmann',
+    age: 25,
+    city: 'Oslo',
+    hobbies: ['koding', 'gaming', 'fotball']
+  };
+  
+  // Create object demo
+  if (createBtn) {
+    createBtn.addEventListener('click', () => {
+      output.innerHTML = `
+        <p><strong>Person object:</strong></p>
+        <pre style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; overflow-x: auto;"><code>${JSON.stringify(person, null, 2)}</code></pre>
+        <p style="color: var(--text-muted); margin-top: 1rem;">
+          Objects lagrer relatert data sammen med key-value pairs.
+        </p>
+      `;
+    });
+  }
+  
+  // Destructuring demo
+  if (destructureBtn) {
+    destructureBtn.addEventListener('click', () => {
+      const { name, age, city } = person;
+      output.innerHTML = `
+        <p><strong>Destructuring:</strong></p>
+        <pre style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; overflow-x: auto;"><code>const { name, age, city } = person;
+
+console.log(name);  // "${name}"
+console.log(age);   // ${age}
+console.log(city);  // "${city}"</code></pre>
+        <p style="color: var(--text-muted); margin-top: 1rem;">
+          Destructuring lar deg pakke ut properties fra et object.
+        </p>
+      `;
+    });
+  }
+  
+  // Spread demo
+  if (spreadBtn) {
+    spreadBtn.addEventListener('click', () => {
+      const updatedPerson = { ...person, age: 26, country: 'Norge' };
+      output.innerHTML = `
+        <p><strong>Spread operator:</strong></p>
+        <pre style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; overflow-x: auto;"><code>const updatedPerson = {
+  ...person,
+  age: 26,
+  country: 'Norge'
+};
+
+// Result:
+${JSON.stringify(updatedPerson, null, 2)}</code></pre>
+        <p style="color: var(--text-muted); margin-top: 1rem;">
+          Spread operator (...) kopierer properties og lar deg overskrive/legge til nye.
+        </p>
+      `;
+    });
+  }
+}
+
+/**
+ * ==========================================
+ * ASYNC DEMO
+ * ==========================================
+ */
+
+function initAsyncDemo() {
+  const fetchBtn = document.getElementById('fetchDataBtn');
+  const asyncBtn = document.getElementById('asyncAwaitBtn');
+  const output = document.getElementById('asyncOutput');
+  
+  if (!output) return;
+  
+  // Simulate API call
+  function fakeAPICall() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({
+          message: 'Data hentet!',
+          data: ['Item 1', 'Item 2', 'Item 3'],
+          timestamp: new Date().toLocaleTimeString('no-NO')
+        });
+      }, 1500);
+    });
+  }
+  
+  // Fetch demo
+  if (fetchBtn) {
+    fetchBtn.addEventListener('click', () => {
+      output.innerHTML = '<p style="color: var(--accent-color);">⏳ Henter data...</p>';
+      
+      fakeAPICall().then(result => {
+        output.innerHTML = `
+          <p style="color: var(--success-color);">✅ ${result.message}</p>
+          <p><strong>Data:</strong> ${result.data.join(', ')}</p>
+          <p><strong>Tid:</strong> ${result.timestamp}</p>
+          <pre style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; margin-top: 1rem; overflow-x: auto;"><code>fakeAPICall()
+  .then(result => {
+    console.log(result);
+  });</code></pre>
+          <p style="color: var(--text-muted); margin-top: 1rem;">
+            Promises håndterer asynkrone operasjoner med <code>.then()</code>
+          </p>
+        `;
+      });
+    });
+  }
+  
+  // Async/await demo
+  if (asyncBtn) {
+    asyncBtn.addEventListener('click', async () => {
+      output.innerHTML = '<p style="color: var(--accent-color);">⏳ Henter data med async/await...</p>';
+      
+      try {
+        const result = await fakeAPICall();
+        output.innerHTML = `
+          <p style="color: var(--success-color);">✅ ${result.message}</p>
+          <p><strong>Data:</strong> ${result.data.join(', ')}</p>
+          <p><strong>Tid:</strong> ${result.timestamp}</p>
+          <pre style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; margin-top: 1rem; overflow-x: auto;"><code>async function getData() {
+  const result = await fakeAPICall();
+  console.log(result);
+}
+
+getData();</code></pre>
+          <p style="color: var(--text-muted); margin-top: 1rem;">
+            <code>async/await</code> gjør asynkron kode mer lesbar og enklere å forstå.
+          </p>
+        `;
+      } catch (error) {
+        output.innerHTML = `<p style="color: var(--error-color);">❌ Feil: ${error.message}</p>`;
+      }
+    });
+  }
+}
+
+/**
+ * ==========================================
+ * STORAGE DEMO
+ * ==========================================
+ */
+
+function initStorageDemo() {
+  const input = document.getElementById('storageInput');
+  const saveBtn = document.getElementById('saveBtn');
+  const loadBtn = document.getElementById('loadBtn');
+  const clearBtn = document.getElementById('clearBtn');
+  const output = document.getElementById('storageOutput');
+  
+  if (!output) return;
+  
+  // Load existing data on init
+  const existing = localStorage.getItem('playgroundData');
+  if (existing) {
+    output.innerHTML = `
+      <p style="color: var(--text-secondary);">💾 Lagret data funnet:</p>
+      <p style="color: var(--primary-color); font-weight: bold;">"${existing}"</p>
+    `;
+  }
+  
+  // Save
+  if (saveBtn && input) {
+    saveBtn.addEventListener('click', () => {
+      const value = input.value.trim();
+      if (!value) {
+        output.innerHTML = '<p style="color: var(--error-color);">⚠️ Skriv noe først!</p>';
+        return;
+      }
+      
+      localStorage.setItem('playgroundData', value);
+      output.innerHTML = `
+        <p style="color: var(--success-color);">✅ Lagret til localStorage!</p>
+        <p><strong>Data:</strong> "${value}"</p>
+        <pre style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; margin-top: 1rem; overflow-x: auto;"><code>localStorage.setItem('playgroundData', '${value}');</code></pre>
+        <p style="color: var(--text-muted); margin-top: 1rem;">
+          Data blir værende selv etter du lukker browseren!
+        </p>
+      `;
+      input.value = '';
+    });
+  }
+  
+  // Load
+  if (loadBtn) {
+    loadBtn.addEventListener('click', () => {
+      const data = localStorage.getItem('playgroundData');
+      if (data) {
+        output.innerHTML = `
+          <p style="color: var(--success-color);">✅ Lastet fra localStorage!</p>
+          <p><strong>Data:</strong> "${data}"</p>
+          <pre style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; margin-top: 1rem; overflow-x: auto;"><code>const data = localStorage.getItem('playgroundData');
+console.log(data);  // "${data}"</code></pre>
+        `;
+      } else {
+        output.innerHTML = '<p style="color: var(--text-muted);">📭 Ingen lagret data funnet.</p>';
+      }
+    });
+  }
+  
+  // Clear
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      localStorage.removeItem('playgroundData');
+      output.innerHTML = `
+        <p style="color: var(--success-color);">✅ Data slettet fra localStorage!</p>
+        <pre style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; margin-top: 1rem; overflow-x: auto;"><code>localStorage.removeItem('playgroundData');</code></pre>
+      `;
+    });
+  }
+}
+
+/**
  * ============================================
  * SLUTT PÅ PLAYGROUND.JS
  * ============================================
  * 
  * Funksjoner implementert:
  * ✅ Tabs system
+ * ✅ HTML demo (semantic tags, forms, lists)
+ * ✅ CSS demo (flexbox, grid, animations)
  * ✅ Variables demo (input og output)
  * ✅ Functions demo (matematikk)
+ * ✅ Arrays demo (map, filter, reduce)
+ * ✅ Objects demo (create, destructure, spread)
  * ✅ DOM manipulation demo (endre styling)
  * ✅ Events demo (click counter)
+ * ✅ Async demo (promises, async/await)
+ * ✅ Storage demo (localStorage)
  * 
  * Konsepter vist:
+ * - HTML semantic tags, forms, lists
+ * - CSS flexbox, grid, animations
  * - Event listeners
  * - DOM manipulation
  * - Functions
- * - Arrays
+ * - Arrays & Array methods
+ * - Objects & Destructuring
  * - Conditionals
  * - Animations
+ * - Promises & Async/Await
+ * - LocalStorage
  */

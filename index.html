@@ -320,14 +320,54 @@
           <div class="playground-container">
             <!-- Tabs for ulike eksempler -->
             <div class="tabs">
-              <button class="tab-btn active" data-tab="variables">Variabler</button>
+              <button class="tab-btn active" data-tab="html">HTML</button>
+              <button class="tab-btn" data-tab="css">CSS</button>
+              <button class="tab-btn" data-tab="variables">Variabler</button>
               <button class="tab-btn" data-tab="functions">Funksjoner</button>
-              <button class="tab-btn" data-tab="dom">DOM Manipulation</button>
+              <button class="tab-btn" data-tab="arrays">Arrays</button>
+              <button class="tab-btn" data-tab="objects">Objects</button>
+              <button class="tab-btn" data-tab="dom">DOM</button>
               <button class="tab-btn" data-tab="events">Events</button>
+              <button class="tab-btn" data-tab="async">Async</button>
+              <button class="tab-btn" data-tab="storage">Storage</button>
             </div>
 
             <!-- Tab content -->
-            <div class="tab-content active" id="variables-tab">
+            <div class="tab-content active" id="html-tab">
+              <div class="playground-demo">
+                <h3>HTML Basics</h3>
+                <p>HTML (HyperText Markup Language) er strukturen til nettsider.</p>
+                
+                <div class="demo-controls">
+                  <button class="btn btn-primary" id="htmlTagsBtn">Semantiske Tags</button>
+                  <button class="btn btn-secondary" id="htmlFormBtn">Form Elements</button>
+                  <button class="btn btn-accent" id="htmlListBtn">Lists</button>
+                </div>
+                
+                <div class="demo-output" id="htmlOutput">
+                  <p style="color: var(--text-muted);">Klikk på en knapp for å se HTML eksempler!</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-content" id="css-tab">
+              <div class="playground-demo">
+                <h3>CSS Basics</h3>
+                <p>CSS (Cascading Style Sheets) styler HTML elementer.</p>
+                
+                <div class="demo-controls">
+                  <button class="btn btn-primary" id="cssFlexBtn">Flexbox</button>
+                  <button class="btn btn-secondary" id="cssGridBtn">Grid</button>
+                  <button class="btn btn-accent" id="cssAnimBtn">Animation</button>
+                </div>
+                
+                <div class="demo-output" id="cssOutput">
+                  <p style="color: var(--text-muted);">Klikk på en knapp for å se CSS i aksjon!</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-content" id="variables-tab">
               <div class="playground-demo">
                 <h3>Variabler i JavaScript</h3>
                 <p>Variabler brukes til å lagre data. Vi har <code>let</code> og <code>const</code>.</p>
@@ -376,6 +416,56 @@
               </div>
             </div>
 
+            <div class="tab-content" id="arrays-tab">
+              <div class="playground-demo">
+                <h3>Array Methods</h3>
+                <p>Arrays har kraftige metoder for å manipulere data.</p>
+                
+                <div class="demo-controls">
+                  <button class="btn btn-primary" id="arrayMapBtn">Map</button>
+                  <button class="btn btn-secondary" id="arrayFilterBtn">Filter</button>
+                  <button class="btn btn-accent" id="arrayReduceBtn">Reduce</button>
+                </div>
+                
+                <div class="demo-output" id="arrayOutput">
+                  <p style="color: var(--text-muted);">Klikk på en knapp for å se array methods i aksjon!</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-content" id="objects-tab">
+              <div class="playground-demo">
+                <h3>Objects & Destructuring</h3>
+                <p>Objects brukes til å lagre relatert data sammen.</p>
+                
+                <div class="demo-controls">
+                  <button class="btn btn-primary" id="createObjectBtn">Lag Object</button>
+                  <button class="btn btn-secondary" id="destructureBtn">Destructure</button>
+                  <button class="btn btn-accent" id="spreadBtn">Spread</button>
+                </div>
+                
+                <div class="demo-output" id="objectOutput"></div>
+              </div>
+            </div>
+
+            <div class="tab-content" id="dom-tab">
+              <div class="playground-demo">
+                <h3>DOM Manipulation</h3>
+                <p>JavaScript kan endre HTML og CSS dynamisk.</p>
+                
+                <div class="demo-controls">
+                  <button class="btn btn-primary" id="changeColorBtn">Endre Farge</button>
+                  <button class="btn btn-secondary" id="changeTextBtn">Endre Tekst</button>
+                </div>
+                
+                <div class="demo-output">
+                  <div id="demoBox" class="demo-box">
+                    Jeg kan endres!
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="tab-content" id="events-tab">
               <div class="playground-demo">
                 <h3>Event Listeners</h3>
@@ -388,6 +478,38 @@
                 <div class="demo-output">
                   <p>Antall klikk: <span id="clickCount">0</span></p>
                 </div>
+              </div>
+            </div>
+
+            <div class="tab-content" id="async-tab">
+              <div class="playground-demo">
+                <h3>Async & Promises</h3>
+                <p>Håndter asynkrone operasjoner med Promises og async/await.</p>
+                
+                <div class="demo-controls">
+                  <button class="btn btn-primary" id="fetchDataBtn">Fetch Data</button>
+                  <button class="btn btn-secondary" id="asyncAwaitBtn">Async/Await</button>
+                </div>
+                
+                <div class="demo-output" id="asyncOutput">
+                  <p style="color: var(--text-muted);">Klikk for å se asynkron kode i aksjon!</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-content" id="storage-tab">
+              <div class="playground-demo">
+                <h3>LocalStorage</h3>
+                <p>Lagre data i browseren som blir værende mellom sessions.</p>
+                
+                <div class="demo-controls">
+                  <input type="text" id="storageInput" placeholder="Skriv noe..." />
+                  <button class="btn btn-primary" id="saveBtn">Lagre</button>
+                  <button class="btn btn-secondary" id="loadBtn">Last</button>
+                  <button class="btn btn-ghost" id="clearBtn">Slett</button>
+                </div>
+                
+                <div class="demo-output" id="storageOutput"></div>
               </div>
             </div>
           </div>
