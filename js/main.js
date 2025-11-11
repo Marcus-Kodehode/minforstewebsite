@@ -25,6 +25,7 @@ import { initCards, filterCards, searchCards } from './cards.js';
 import { initPlayground } from './playground.js';
 import { initModal } from './modal.js';
 import { initForm } from './form.js';
+import { initTips } from './tips.js';
 
 /**
  * ==========================================
@@ -64,8 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initPlayground();
   initModal();
   initForm();
+  initTips(); // Starter tip system
   
   console.log('✅ Alle funksjoner er initialisert!');
+  console.log('💡 Tips: Åpne DevTools (F12) for å se mer info og prøve eksempler!');
 });
 
 /**

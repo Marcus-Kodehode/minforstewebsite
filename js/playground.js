@@ -248,13 +248,83 @@ function initEventsDemo() {
     
     // Spesiell melding ved visse tall
     if (count === 10) {
-      alert('🎉 Gratulerer! Du har klikket 10 ganger!');
+      showAchievement('🎉 Gratulerer! Du har klikket 10 ganger!');
     } else if (count === 50) {
-      alert('🔥 Wow! 50 klikk! Du er dedikert!');
+      showAchievement('🔥 Wow! 50 klikk! Du er dedikert!');
     } else if (count === 100) {
-      alert('🏆 LEGENDARISK! 100 klikk! Du er en mester!');
+      showAchievement('🏆 LEGENDARISK! 100 klikk! Du er en mester!');
     }
   });
+}
+
+/**
+ * ==========================================
+ * ACHIEVEMENT SYSTEM
+ * ==========================================
+ */
+
+/**
+ * Viser achievement melding
+ * @param {string} message - Achievement melding
+ */
+function showAchievement(message) {
+  // Lag achievement element
+  const achievement = document.createElement('div');
+  achievement.className = 'achievement-toast';
+  achievement.textContent = message;
+  achievement.style.cssText = `
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-xl);
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out;
+    font-weight: bold;
+  `;
+  
+  // Legg til i DOM
+  document.body.appendChild(achievement);
+  
+  // Fjern etter 3 sekunder
+  setTimeout(() => {
+    achievement.style.animation = 'slideOut 0.3s ease-out';
+    setTimeout(() => {
+      achievement.remove();
+    }, 300);
+  }, 3000);
+}
+
+// Legg til CSS animasjoner
+if (!document.getElementById('achievement-styles')) {
+  const style = document.createElement('style');
+  style.id = 'achievement-styles';
+  style.textContent = `
+    @keyframes slideIn {
+      from {
+        transform: translateX(400px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    @keyframes slideOut {
+      from {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      to {
+        transform: translateX(400px);
+        opacity: 0;
+      }
+    }
+  `;
+  document.head.appendChild(style);
 }
 
 /**

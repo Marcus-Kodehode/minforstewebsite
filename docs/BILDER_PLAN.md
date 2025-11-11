@@ -162,30 +162,30 @@ implementering eksempel (kan forbedres/perfeksjoneres):
 ### UI Ikoner
 
 #### 14. Meny Ikon (Hamburger)
-- **Filnavn:** `icon-menu.svg`
+- **Filnavn:** `icon-menu.png`
 - **Plassering:** `assets/icons/`
-- **Størrelse:** 24x24px (SVG)
+- **Størrelse:** 24x24px (png)
 - **Beskrivelse:** Hamburger meny for mobil
 - **Status:** 🔴 Må lages
 
 #### 15. Lukk Ikon (X)
-- **Filnavn:** `icon-close.svg`
+- **Filnavn:** `icon-close.png`
 - **Plassering:** `assets/icons/`
-- **Størrelse:** 24x24px (SVG)
+- **Størrelse:** 24x24px (png)
 - **Beskrivelse:** Lukk knapp for modal/meny
 - **Status:** 🔴 Må lages
 
 #### 16. Søk Ikon
-- **Filnavn:** `icon-search.svg`
+- **Filnavn:** `icon-search.png`
 - **Plassering:** `assets/icons/`
-- **Størrelse:** 24x24px (SVG)
+- **Størrelse:** 24x24px (png)
 - **Beskrivelse:** Søk ikon for filter funksjon
 - **Status:** 🔴 Må lages
 
 #### 17. Filter Ikon
-- **Filnavn:** `icon-filter.svg`
+- **Filnavn:** `icon-filter.png`
 - **Plassering:** `assets/icons/`
-- **Størrelse:** 24x24px (SVG)
+- **Størrelse:** 24x24px (png)
 - **Beskrivelse:** Filter ikon
 - **Status:** 🔴 Må lages
 

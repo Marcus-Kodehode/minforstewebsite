@@ -106,17 +106,17 @@ Oppgradere eksisterende website med fokus på:
 - [x] Legg til responsive breakpoints
 - [x] Implementer subtile animasjoner
 
-### Fase 4: JavaScript Funksjonalitet
-- [ ] Lag main.js som koordinerer alt
-- [ ] Implementer smooth scroll navigation
-- [ ] Lag modal system (for å vise detaljer)
-- [ ] Implementer tabs (for code examples)
-- [ ] Lag filter/søk for people cards
-- [ ] Implementer form validering
-- [ ] Lag interactive playground (live code editor?)
-- [ ] Legg til localStorage eksempel
-- [ ] Forbedre scroll-to-top button
-- [ ] Legg til loading states
+### Fase 4: JavaScript Funksjonalitet ✅
+- [x] Lag main.js som koordinerer alt
+- [x] Implementer smooth scroll navigation
+- [x] Lag modal system (for å vise detaljer)
+- [x] Implementer tabs (for code examples)
+- [x] Lag filter/søk for people cards
+- [x] Implementer form validering
+- [x] Lag interactive playground (live code editor?)
+- [x] Legg til localStorage eksempel
+- [x] Forbedre scroll-to-top button
+- [x] Legg til loading states
 
 ### Fase 5: Innhold & Læring
 - [ ] Skriv omfattende kommentarer i alle filer
